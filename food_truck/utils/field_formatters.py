@@ -17,12 +17,23 @@ def convert_date_to_desired_format(date_string):
 
 
 def convert_decimal_format(value):
+    if not value:  # Check if the value is empty (empty string or None)
+        return None  # Return None if the value is empty
+    
     value_str = str(value)  # Convert the value to a string
 
-    # If the length is greater than 7, truncate the excess and add decimal point
-    if len(value_str) > 7:
-        value_str = value_str[:-2]  # Remove excess digits from the end
-        value_str = value_str[:-5] + '.' + value_str[-5:]  # Insert the decimal point
+    # If the length is greater than 7 and the value isn't already in the desired format
+    if len(value_str) > 7 and '.' not in value_str:
+        integer_part = value_str[:-2]  # Retrieve the integer part
+        decimal_part = value_str[-2:]  # Retrieve the last two digits as the decimal part
+        value_str = f"{integer_part}.{decimal_part}"  # Reconstruct the value with a decimal point
 
-    return float(value_str) 
+    return float(value_str)
+
+def fix_empty_value(value):
+    if not value:  # Check if the value is empty (empty string or None)
+        return None  # Return None if the value is empty
+    
+    return value
+
     
