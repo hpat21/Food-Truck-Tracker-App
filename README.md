@@ -26,12 +26,11 @@ San Francisco's food truck open dataset is included in this [repo](https://raw.g
 - **Real-World Simulation:** Treat this task as you would a project intended for production. Create a GitHub repository, use git for version control, and document your project in a README.md file.
 - **Production-Oriented:** Your solution should reflect what you would deliver in a production environment. We understand this might limit the scope within the given time, but we prefer a production-ready approach over a feature-heavy one.
 - **Documentation and Rationale:** Document your technical decisions, trade-offs, and any considerations you had. If you had more time or were to do it again, let us know what you would change or improve.
-- **Flexibility in Tools and Languages:** Although our apps are primarily build on Django but you're free to use the tools you're most comfortable with, but make sure to document the setup process.
+- **Flexibility in Tools and Languages:** Please use django as your framework but do not limit yourself to vanilla django, feel free to use everything you'd like on top of it.
 
 ## 📬 How to Submit Your Work
-  - **Fork this Repository:** Start by forking this repository to create your own workspace.
-  - **Document Your Process:** Include a README.md in your submission detailing how to set up and run your script.
-  - **Comment Your Code:** Make sure your script is well-documented with comments explaining your logic and approach.
-  - **Create a Pull Request:** Once you're done, submit your work by creating a pull request to this repository.
-  - **Deadline:** Please submit your assignment within 5 days of receiving these instructions.
-
+- **Private Fork:** Instead of forking the public repository, create a copy of it. You can do this by cloning the repository to your local machine and then pushing it as a new **public repository** under your own GitHub account.
+- **Document Your Process:** Include a README.md in your submission detailing how to set up and run your script. This should be unique to your implementation and understanding.
+- **Comment Your Code:** Ensure your script is well-documented with comments that explain your logic and approach. This documentation should reflect your personal problem-solving process.
+- **Email Submission:** Rather than creating a pull request, which is public, send us a link to your public repository via email to developer@rakt.org with the title "[P1-Submission] Your name". Ensure your repo is public so that we can access it.
+- **Deadline:** Please submit your assignment within 5 days of receiving these instructions.
