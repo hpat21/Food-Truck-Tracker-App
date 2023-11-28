@@ -18,7 +18,7 @@ The only requirement for the assignment is that it give us at least 5 food truck
 
 Feel free to tackle this problem in a way that demonstrates your expertise of an area -- or takes you out of your comfort zone. For example, if you build Web APIs by day and want to build a frontend to the problem or a completely different language instead, by all means go for it - learning is a core competency in our group. Let us know this context in your solution's documentation.
 
-San Francisco's food truck open dataset is included in this [repo](https://raw.githubusercontent.com/RAKT-Innovations/P1-django-take-home-assignment/main/food-truck-data.csv).
+San Francisco's food truck open dataset (csv) is included in this [repo](https://raw.githubusercontent.com/RAKT-Innovations/P1-django-take-home-assignment/main/food-truck-data.csv).
 
 
 ## 🕹️ Our Approach
