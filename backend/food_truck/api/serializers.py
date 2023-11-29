@@ -3,7 +3,6 @@ from food_truck.models import FoodTruckInfo
 
 
 class FoodTruckInfoSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model = FoodTruckInfo
-        fields = '__all__'
+        fields = "__all__"
