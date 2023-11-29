@@ -24,7 +24,7 @@ def convert_date_to_desired_format(date_string):
 def convert_decimal_format(value):
     """
     Converts the input value to a specific decimal format.
-    If the input value has more than 7 characters and 
+    If the input value has more than 7 characters and
     doesn't contain a decimal point, converts it to a format -
     with 7 digits before the decimal point.
     """
