@@ -1,15 +1,16 @@
-import json
 from rest_framework import status
-from django.utils import timezone
-from django.http import response
 from django.urls import reverse
 
-from rest_framework.test import APIClient, APITestCase, APIRequestFactory
+from rest_framework.test import APITestCase
 
 from food_truck.models import FoodTruckInfo
 
 
 class TestAPI(APITestCase):
+    """
+    Test API endpoints and requests.
+    """
+
     def setUp(self):
         self.food_truck = FoodTruckInfo.objects.create(
             location_id=1728067,
