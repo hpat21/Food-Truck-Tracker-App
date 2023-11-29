@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class FoodTruckInfo(models.Model):
     location_id = models.IntegerField()
@@ -26,11 +27,21 @@ class FoodTruckInfo(models.Model):
     prior_permit = models.IntegerField(null=True, blank=True)
     expiration_date = models.DateField(null=True, blank=True)
     location = models.CharField(max_length=255)
-    fire_prevention_districts = models.IntegerField(null=True, )
-    police_districts = models.IntegerField(null=True, )
-    supervisor_districts = models.IntegerField(null=True, )
-    zip_codes = models.IntegerField(null=True, )
-    neighborhoods_old = models.IntegerField(null=True, )
+    fire_prevention_districts = models.IntegerField(
+        null=True,
+    )
+    police_districts = models.IntegerField(
+        null=True,
+    )
+    supervisor_districts = models.IntegerField(
+        null=True,
+    )
+    zip_codes = models.IntegerField(
+        null=True,
+    )
+    neighborhoods_old = models.IntegerField(
+        null=True,
+    )
 
     def __str__(self):
         return self.applicant
