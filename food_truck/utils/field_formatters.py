@@ -35,5 +35,3 @@ def fix_empty_value(value):
         return None  # Return None if the value is empty
     
     return value
-
-    
