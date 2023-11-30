@@ -45,7 +45,7 @@ class TestFoodTruckInfo(TestCase):
         """
         Test FoodTruckInfo model.
         """
-        
+
         self.assertEqual(self.food_truck.zip_codes, 28859)
         self.assertEqual(self.food_truck.block_lot, 3595031)
         self.assertEqual(self.food_truck.location_id, 1728067)
@@ -53,4 +53,3 @@ class TestFoodTruckInfo(TestCase):
         self.assertNotEqual(self.food_truck.location_id, 123456)
         self.assertNotEqual(self.food_truck.approved, 3232323)
         self.assertNotEqual(self.food_truck.block_lot, str(3595031))
-        

@@ -18,6 +18,12 @@ class Command(BaseCommand):
         csv_file = kwargs["csv_path"]
 
         try:
+            if FoodTruckInfo.objects.exists():
+                self.stdout.write(
+                    self.style.SUCCESS("FoodTruckInfo table already populated.")
+                )
+                return
+
             with open(csv_file, "r", encoding="utf-8") as file:
                 reader = csv.DictReader(file)
                 for row in reader:
