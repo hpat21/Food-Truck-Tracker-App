@@ -3,6 +3,10 @@ from food_truck.models import FoodTruckInfo
 
 
 class TestFoodTruckInfo(TestCase):
+    """
+    Class to test the system models.
+    """
+
     def setUp(self):
         self.food_truck = FoodTruckInfo.objects.create(
             location_id=1728067,
@@ -37,5 +41,16 @@ class TestFoodTruckInfo(TestCase):
         )
         self.food_truck.save()
 
-    def test_food_trucks_info_model(self):
-        pass
+    def test_food_truck_info_model(self):
+        """
+        Test FoodTruckInfo model.
+        """
+        
+        self.assertEqual(self.food_truck.zip_codes, 28859)
+        self.assertEqual(self.food_truck.block_lot, 3595031)
+        self.assertEqual(self.food_truck.location_id, 1728067)
+        self.assertEqual(self.food_truck.approved, "2021-11-05")
+        self.assertNotEqual(self.food_truck.location_id, 123456)
+        self.assertNotEqual(self.food_truck.approved, 3232323)
+        self.assertNotEqual(self.food_truck.block_lot, str(3595031))
+        
