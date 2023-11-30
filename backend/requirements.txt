@@ -11,3 +11,5 @@ pytz==2023.3.post1
 sqlparse==0.4.4
 tomli==2.0.1
 typing_extensions==4.8.0
+psycopg2-binary>=2.9,<3.0
+django-environ>=0.7,<1.0
