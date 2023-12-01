@@ -1,6 +1,9 @@
 from rest_framework import status
 from django.urls import reverse
 
+from django.core.management import call_command
+from io import StringIO
+
 from rest_framework.test import APITestCase
 
 from food_truck.models import FoodTruckInfo
@@ -106,3 +109,36 @@ class TestAPI(APITestCase):
         """Test DELETE method for food trucks endpoint"""
         response = self.client.delete(self.url_food_trucks_detail, format="json")
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+    def test_get_food_trucks_with_params(self):
+        """GET method for food trucks endpoint with geolocation parameters"""
+        out = StringIO()
+        latitude = 37.787988648995280
+        longitude = -122.396100668471520
+        radius = 2
+
+        # delete all items from table first.
+        call_command("delete_all_data", "FoodTruckInfo", stdout=out)
+
+        # repopulate the table since this command wont work if it is not empty.
+        call_command("populate_food_trucks", "food-truck-data.csv", stdout=out)
+
+        url = f"{self.url_food_trucks_list}?latitude={latitude}&longitude={longitude}&radius={radius}"
+        response = self.client.get(url, format="json")
+
+        all_items = FoodTruckInfo.objects.count()
+
+        self.assertTrue(len(response.data) > 0)
+        self.assertTrue(all_items > len(response.data))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_get_food_trucks_by_cuisine(self):
+        """GET method for food trucks endpoint by cuisine"""
+        cuisine = "Hot dogs"
+        response = self.client.get(
+            f"{self.url_food_trucks_list}?cuisine={cuisine}", format="json"
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.data[0]["food_items"], self.food_truck_data["food_items"]
+        )
