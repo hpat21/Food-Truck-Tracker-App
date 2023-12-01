@@ -1,4 +1,5 @@
 from django.db import models
+from geopy.distance import geodesic
 
 
 # Create your models here.
@@ -42,6 +43,33 @@ class FoodTruckInfo(models.Model):
     neighborhoods_old = models.IntegerField(
         null=True,
     )
+
+    @classmethod
+    def get_nearby_trucks(cls, latitude, longitude, radius):
+        """
+        Retrieve nearby food trucks within a specified radius 
+        (in miles) of a given location.
+        """
+        user_location = (latitude, longitude)
+        nearby_trucks = []
+        all_trucks = cls.objects.all()
+
+        for truck in all_trucks:
+            truck_location = (truck.latitude, truck.longitude)
+            distance = geodesic(user_location, truck_location).miles
+            if distance <= radius:
+                truck.distance = distance
+                nearby_trucks.append(truck)
+
+        return nearby_trucks
+    @classmethod
+    def filter_by_cuisine(cls, cuisine_type):
+        """
+        Filter food trucks by a specific cuisine type based on food items served.
+        """
+        filtered_trucks = cls.objects.filter(food_items__icontains=cuisine_type)
+        return filtered_trucks
+
 
     def __str__(self):
         return self.applicant
