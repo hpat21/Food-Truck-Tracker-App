@@ -11,6 +11,7 @@ services:
     command: bash -c "
         python manage.py migrate && 
         python manage.py populate_food_trucks food-truck-data.csv &&
+        python manage.py test &&
         python manage.py runserver 0.0.0.0:8000"
         
     volumes:
