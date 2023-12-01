@@ -47,7 +47,7 @@ class FoodTruckInfo(models.Model):
     @classmethod
     def get_nearby_trucks(cls, latitude, longitude, radius):
         """
-        Retrieve nearby food trucks within a specified radius 
+        Retrieve nearby food trucks within a specified radius
         (in miles) of a given location.
         """
         user_location = (latitude, longitude)
@@ -62,7 +62,7 @@ class FoodTruckInfo(models.Model):
                 nearby_trucks.append(truck)
 
         return nearby_trucks
-    
+
     @classmethod
     def filter_by_cuisine(cls, cuisine_type):
         """
@@ -70,7 +70,6 @@ class FoodTruckInfo(models.Model):
         """
         filtered_trucks = cls.objects.filter(food_items__icontains=cuisine_type)
         return filtered_trucks
-
 
     def __str__(self):
         return self.applicant
