@@ -46,6 +46,10 @@ html, body {
   margin-right: 10px;
 }
 
+.search-bar:focus {
+  border-color: #007bff;
+}
+
 .title-color {
   color: white;
 }
