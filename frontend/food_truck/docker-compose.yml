@@ -1,11 +1,12 @@
-version: '3'
+version: "3.8"
 services:
-  web:
-    stdin_open: true
-    environment:
-      - CHOKIDAR_USEPOLLING=true
+  app:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/food_truck
     ports:
-      - '3000:80'
+      - 3000:3000
+    image: app:react
+    container_name: react_container
+    command: npm start
