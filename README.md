@@ -67,3 +67,24 @@ Ex:
 > 
 > OK
 > Destroying test database for alias 'default'...
+
+### Frontend
+<br>
+Run the application:
+
+Step 1:
+
+* In the root of the application go to the `/backend` folder.
+* `npm install`
+* `docker-compose up --build`
+* Go to l`ocalhost:3000`
+
+<br>
+If in windows:
+
+* `npm install `
+* `npm start`
+* Go to l`ocalhost:3000`
+
+What sould appear:
+![image.png](.media/image.png)
