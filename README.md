@@ -3,6 +3,7 @@
 ### How to run the application.
 
 #### Backend
+
 Step 1:
 
 * Clone the application to your local machine
@@ -59,6 +60,7 @@ Run tests:
 `python manage.py test`
 
 Ex:
+
 ```
 ..........
 ----------------------------------------------------------------------
@@ -88,3 +90,5 @@ If in windows:
 
 What sould appear:
 ![image.png](.media/image.png)
+
+![image.png](.media/image_2.png)
