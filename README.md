@@ -54,8 +54,16 @@ Retrieve nearby trucks (information):
 `python manage.py retrieve_nearby_trucks <latitude> <longitude> <radius>`
 
 Ex:
-
-> python manage.py retrieve\_nearby\_trucks \`\`37.760086931986980 -122.418806481101140 0.01
+```
+root@c99745dd6dd3:/app# python manage.py retrieve_nearby_trucks 37.760086931986980 -122.418806481101140 0.3
+Nearby Food Trucks:
+Name: Leo's Hot Dogs | Distance: 0.0 miles
+Name: Natan's Catering | Distance: 0.22737891713614777 miles
+Name: Julie's Hot Dogs | Distance: 0.2132391777781961 miles
+Name: SOHOMEI, LLC | Distance: 0.17579350137205169 miles
+Name: Julie's Hot Dogs | Distance: 0.06013131646801611 miles
+Name: Julie's Hot Dogs | Distance: 0.08895032693756173 miles
+```
 
 <br>
 Run tests:
