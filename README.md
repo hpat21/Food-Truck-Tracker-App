@@ -77,14 +77,14 @@ Step 1:
 * In the root of the application go to the `/backend` folder.
 * `npm install`
 * `docker-compose up --build`
-* Go to l`ocalhost:3000`
+* Go to `localhost:3000`
 
 <br>
 If in windows:
 
 * `npm install`
 * `npm start`
-* Go to l`ocalhost:3000`
+* Go to `localhost:3000`
 
 What sould appear:
 ![image.png](.media/image.png)
