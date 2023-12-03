@@ -28,15 +28,17 @@ Add the following command to make the application run:
 
 Step 4:
 Go to the following path to access the backend:
-
+<br>
 [http://localhost:8000/api/food-trucks/](http://localhost:8000/api/food-trucks/)
 
 Different query params you can use:
 
 To return different objects based on cuisine:
+<br>
 [http://localhost:8000/api/food-trucks/?cuisine=mexican](http://localhost:8000/api/food-trucks/?cuisine=mexican)
 
 To return different objects based on latitude, longitude and radius:
+<br>
 [http://localhost:8000/api/food-trucks/?latitude=37.760086931986980&longitude=-122.418806481101140&radius=2](http://localhost:8000/api/food-trucks/?latitude=37.760086931986980&longitude=-122.418806481101140&radius=2)
 
 <br>
