@@ -2,7 +2,7 @@
 
 ### How to run the application.
 
-#### Backend
+### Backend
 
 Step 1:
 
@@ -94,3 +94,11 @@ What sould appear:
 ![image.png](.media/image.png)
 
 ![image.png](.media/image_2.png)
+
+### Rationale
+
+What I would do if I had more time:
+- Add more inputs with different queries in the frontend.
+- Display each truck in different cards and its info with a button to check its location.
+- In the frontend I would create separation of concerns with a directory with their own responsabilities.
+- Would improve the frontend dockerization. 
