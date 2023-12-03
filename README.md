@@ -1,9 +1,8 @@
 ## Take Home Challenge - Elias Prado
 
 ### How to run the application.
-<br>
-#### Backend
 
+#### Backend
 Step 1:
 
 * Clone the application to your local machine
