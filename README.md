@@ -60,13 +60,14 @@ Run tests:
 `python manage.py test`
 
 Ex:
+```
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 1.880s
 
-> ..........
-> \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-> Ran 10 tests in 1.880s
-> 
-> OK
-> Destroying test database for alias 'default'...
+OK
+Destroying test database for alias 'default'...
+```
 
 ### Frontend
 <br>
@@ -82,7 +83,7 @@ Step 1:
 <br>
 If in windows:
 
-* `npm install `
+* `npm install`
 * `npm start`
 * Go to l`ocalhost:3000`
 
