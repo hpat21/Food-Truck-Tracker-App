@@ -1,4 +1,4 @@
-## Take Home Challenge - Elias Prado
+## Food Truck App (Django, Reactjs and Docker)
 
 ### How to run the application.
 
